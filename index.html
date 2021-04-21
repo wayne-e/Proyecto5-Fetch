@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Olympus | Restaurante</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header class="flex header-class">
+        <div class="flex logo-div">
+            <img src="img/LOGO5.png" alt="Olympus | Restaurante" class="logo-olympus">
+            <h3>Olympus | Restaurante</h3>
+        </div>
+        <nav class="flex main-navbar" id="navbar">
+            <a href="#home" class="nav-link">INICIO</a>
+            <!--a href="#promo" class="nav-link">PROMOCIONES</a-->
+            <a href="#products" class="nav-link">PRODUCTOS</a>
+            <a href="#contactus" class="nav-link">CONTÁCTANOS</a>
+        </nav>
+        <span class="bars-icon-span" id="bars-icon"><i class="fas fa-bars"></i></span>
+    </header>
+    <main class="flex full-width">
+        <section id="home" class="flex full-width home-section">
+            <div class="home-description-div">
+                <figure class="flex full-width home-section-logo"><img src="img/LOGO5.png" alt="logo-olympus"
+                        class="big-logo-olympus"></figure>
+                <h1>Olympus | Restaurante</h1>
+                <h2>Otro nivel para tu Paladar</h2>
+                <p class="wheat-span">
+                    Transportate a una nueva experiencia gourmet en <span class="bold-span">Olympus |
+                        Restaurante</span>, donde
+                    te ofrecemos una gran cantidad de productos con gustos y sabores fuera de
+                    este mundo para deleitar tu paladar.
+                </p>
+                <p class="wheat-span">
+                    Disfruta de nuestros Alimentos preparados
+                    bajo los mejores procesos y con los mejores ingredientes.
+                    Deleitate con nuestra diversidad de Bebidas y sella tu visita con los mejores
+                    Postres de todo el sector; todo a excelentes precios.
+                </p>
+                <p class="wheat-span">
+                    Revisa nuestras Promociones, ¡Será un placer atenderte!
+                </p>
+            </div>
+        </section>
+        <!--section id="promo" class="flex full-width promo-section">
+            <h2 class="full-width">Promociones</h2>
+            <p class="full-width">Elija entre nuestros fabulosos <span class="bold-span">Combos</span> en Promoción</p>
+            <div id="promo-div" class="flex full-width promo-div"></div>
+        </section-->
+        <section id="products" class="flex full-width products-section">
+            <h2 class="full-width">Nuestros Productos</h2>
+            <p class="full-width">Consulte nuestras <span class="bold-span">Categorías</span> y elija entre la variedad
+                de Productos</p>
+            <div id="all-categories-div" class="flex full-width"></div>
+            </div>
+        </section>
+        <section id="contactus" class="flex full-width contactus-section">
+            <h2 class="full-width">¡Contáctanos!</h2>
+            <article class="flex contact-element">
+                <h3>En Olympus | Restaurante, <br> ¡Nos encantan los Comentarios!
+                </h3>
+                <img class="contact-image" src="img/improve.jpg" alt="improve">
+                <p>¿Alguna Sugerencia? ¿Le gustaría opinar acerca de <span class="bold-span">nuevos productos</span>?
+                    No dude en comentarnos, y será un placer considerar sus ideas.
+                </p>
+            </article>
+            <div class="flex contact-element">
+                <h3 class="full-width">Ingrese sus datos y <br> envíenos sus comentarios</h3>
+                <form action="" class="flex form-class">
+                    <input class="form-field" type="text" placeholder="Nombre Completo:">
+                    <input class="form-field" type="email" placeholder="Correo Electrónico">
+                    <textarea class="form-field" id="user-comments" cols="30"
+                        rows="10">Sugerencia o Comentario</textarea>
+                    <button type="submit" class="submit-button">Enviar</button>
+                </form>
+            </div>
+        </section>
+    </main>
+    <footer class="flex full-width">
+        <div class="flex footer-element">
+            <h3 class="full-width wheat-span">SÍGUENOS <br> EN NUESTRAS REDES</h3>
+            <a class="flex" href="https://www.facebook.com/"><i class="fab fa-facebook-square"></i></a>
+            <a class="flex" href="https://twitter.com/"><i class="fab fa-twitter-square"></i></a>
+            <a class="flex" href="https://www.instagram.com/"><i class="fab fa-instagram-square"></i></a>
+        </div>
+        <div class="footer-element">
+            <h4 class="wheat-span">Olympus | Restaurante</h4>
+        </div>
+    </footer>
+
+    <!--Modals-->
+
+    <!--Catalog-->
+    <div id="all-products-catalog" class="display-none">
+        <div class="black-background"></div>
+        <div class="product-viewer modal-position">
+            <div class=" full-width relative-class"><i class="fas fa-window-close absolute-item close-modal-button"></i>
+            </div>
+            <div id="products-div">
+                <h3 id="category-header">Comidas</h3>
+                <div id="category-elements-div" class="flex">
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Modal producto-->
+    <div id="product-div" class="display-none">
+        <div class="black-background"></div>
+        <article class="flex product-viewer modal-position product-container">
+            <div class="full-width relative-class"><i class="fas fa-window-close absolute-item close-modal-button"></i>
+            </div>
+            <figure class="flex viewer-element">
+                <img id="selected-product-image" src="" alt="Producto" class="viewer-image">
+            </figure>
+            <div class="flex viewer-element">
+                <h3 id="selected-product-name" class="full-width"></h3>
+                <p id="selected-product-area" class="full-width"></p>
+                <div class="flex">
+                    <button class="itemInfoBtn" name="ingredients-div">Ingredients</button>
+                    <button class="itemInfoBtn" name="measures-div">Measures</button>
+                    <button class="itemInfoBtn" name="origin-div">Origin</button>
+                </div>                
+                <div id="ingredients-div" class="item-details">
+                    <h4><span class="brown-span">Ingredients</span></h4>
+                    <p id="item-ingredients"></p>
+                </div>
+
+                <div id="measures-div" class="item-details display-none">
+                    <h4><span class="brown-span">Measures</span></h4>
+                    <p id="item-measures"></p>
+                </div>
+
+                <div id="origin-div" class="item-details display-none">
+                    <h4><span class="brown-span">Origin</span></h4>
+                    <p id="item-origin"></p>
+                </div>
+
+
+
+
+            </div>
+        </article>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="https://kit.fontawesome.com/ef503248b8.js" crossorigin="anonymous"></script>
+</body>
+
+</html>
